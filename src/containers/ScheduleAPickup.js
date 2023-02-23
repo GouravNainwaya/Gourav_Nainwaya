@@ -11,11 +11,11 @@ import { AntDesign } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import BottomBtn from "../components/BottomBtn";
 
-const ScheduleAPickup = () => {
+const ScheduleAPickup = ({navigation}) => {
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
       <Header title={"Schedule A Pickup"} />
-      <ScrollView>
+      <ScrollView  alwaysBounceVertical>
       <Text
         style={{
           width: horizontalScale(325),
@@ -113,6 +113,7 @@ const ScheduleAPickup = () => {
           >
             Total
           </Text>
+            <View style={{width: '100%',position: 'absolute',backgroundColor: colors.secondary,height: 0.2,bottom: 22}}/>
           <Text
             style={{
               fontSize: moderateScale(16),
@@ -718,7 +719,7 @@ const ScheduleAPickup = () => {
             elevation: 150,
         }}
       >
-        <BottomBtn choosedType={true} />
+        <BottomBtn title={"Confirm Order"} onPress={() => navigation.navigate('OrderDetails')} choosedType={true} />
       </View>
       {/* //? bottom  */}
     </View>

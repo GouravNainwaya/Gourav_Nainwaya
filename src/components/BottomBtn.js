@@ -14,7 +14,7 @@ import {
 } from "../constatnts/customResponsiveStyles";
 import colors from "./../utils/colors";
 
-const BottomBtn = ({ choosedType }) => {
+const BottomBtn = ({ choosedType ,title, onPress}) => {
   return (
     <TouchableOpacity>
       <Text
@@ -33,8 +33,9 @@ const BottomBtn = ({ choosedType }) => {
           fontWeight: "500",
           lineHeight: 18,
         }}
+        onPress={onPress}
       >
-        Confirm Order
+        {title}
       </Text>
     </TouchableOpacity>
   );

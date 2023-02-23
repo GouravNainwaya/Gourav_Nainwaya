@@ -19,7 +19,7 @@ import { Entypo, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import BottomBtn from "./../components/BottomBtn";
 import Header from './../components/Header';
 
-const OrdersList = () => {
+const OrdersList = ({navigation}) => {
   const [optionsName, setOptionsName] = useState([
     { name: "Wash", choosed: true, id: 0 },
     { name: "Ironing", choosed: false, id: 1 },
@@ -85,8 +85,9 @@ const OrdersList = () => {
       id: 10,
     },
   ]);
+
   return (
-    <View style={{flex: 1,justifyContent: 'center',alignItems: 'center'}}>
+    <View style={{flex: 1,justifyContent: 'center',alignItems: 'center',marginTop: verticalScale(20)}}>
       <Header title={"Orders List"}/>
       <View style={{ marginLeft: "5%", marginVertical: "3%" }}>
         {/*//? options btns  */}
@@ -334,7 +335,7 @@ const OrdersList = () => {
             </Text>
           </View>
         </View>
-        <BottomBtn choosedType={true} />
+        <BottomBtn title={"Confirm Order"} onPress={() => navigation.navigate('ScheduleAPickup')} choosedType={true} />
       </View>
       {/* //? bottom  */}
     </View>

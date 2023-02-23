@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import {
@@ -17,8 +18,10 @@ import {
 import colors from "../utils/colors.js";
 
 const Header = ({title}) => {
+  const navigation = useNavigation()
   return (
     <SafeAreaView style={{flexDirection: 'row',alignItems: 'center',justifyContent: 'space-around',height: '7%',}}>
+      <TouchableOpacity onPress={() => navigation.goBack()}> 
       <Image
         style={{
           width: horizontalScale(20),
@@ -27,6 +30,7 @@ const Header = ({title}) => {
         resizeMode="contain"
         source={require("../../assets/icon/arrow-left.png")}
       />
+      </TouchableOpacity>
       <Text
         style={{
           width: horizontalScale(267),
