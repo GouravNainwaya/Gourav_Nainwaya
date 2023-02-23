@@ -23,7 +23,8 @@ const colors = {
   lightBlue: "#A4DBE8",
   lightBlack: '#211d18',
   pink: '#CE1567',
-  backgroundColor: '#F5F5F5'
+  backgroundColor: '#F5F5F5',
+  cardsbackgroundColor: '#F9F9F9'
 };
 
 export default colors;

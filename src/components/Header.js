@@ -16,7 +16,7 @@ import {
 } from "../constatnts/customResponsiveStyles.js";
 import colors from "../utils/colors.js";
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <SafeAreaView style={{flexDirection: 'row',alignItems: 'center',justifyContent: 'space-around',height: '7%',}}>
       <Image
@@ -37,10 +37,10 @@ const Header = () => {
           fontSize: moderateScale(18),
           lineHeight: 21,
           fontWeight: "500",
-          color: colors.primary
+          color: colors.secondary
         }}
       >
-        Orders List
+        {title}
       </Text>
       <Image
         style={{

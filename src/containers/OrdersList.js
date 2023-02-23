@@ -14,7 +14,6 @@ import {
   moderateScale,
   verticalScale,
 } from "../constatnts/customResponsiveStyles.js";
-// import Header from "../components/Header.js";
 import colors from "./../utils/colors";
 import { Entypo, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import BottomBtn from "./../components/BottomBtn";
@@ -70,10 +69,25 @@ const OrdersList = () => {
       name: "T-Shirt",
       id: 7,
     },
+    {
+      imageLogo: require("../../assets/icon/tshirt.png"),
+      name: "T-Shirt",
+      id: 8,
+    },
+    {
+      imageLogo: require("../../assets/icon/tshirt.png"),
+      name: "T-Shirt",
+      id: 9,
+    },
+    {
+      imageLogo: require("../../assets/icon/tshirt.png"),
+      name: "T-Shirt",
+      id: 10,
+    },
   ]);
   return (
     <View style={{flex: 1,justifyContent: 'center',alignItems: 'center'}}>
-      <Header/>
+      <Header title={"Orders List"}/>
       <View style={{ marginLeft: "5%", marginVertical: "3%" }}>
         {/*//? options btns  */}
         <ScrollView horizontal>
@@ -239,6 +253,8 @@ const OrdersList = () => {
           height: verticalScale(198),
           borderTopEndRadius: moderateScale(50),
           borderTopStartRadius: moderateScale(50),
+          borderTopLeftRadius: moderateScale(50),
+          borderTopRightRadius: moderateScale(50),
           shadowColor: "#000000",
             shadowOffset: {
             width: 0,
@@ -251,7 +267,6 @@ const OrdersList = () => {
       >
         <View
           style={{
-            //   backgroundColor: "red",
             width: horizontalScale(360),
             height: verticalScale(72),
             flexDirection: "row",
@@ -299,10 +314,6 @@ const OrdersList = () => {
           <View style={{ alignItems: "center" }}>
             <Text
               style={{
-                // width: horizontalScale(100),
-                // height: verticalScale(19),
-                // paddingVertical: 10,
-                // textAlign: "center",
                 fontSize: moderateScale(12),
                 color: colors.pink,
                 lineHeight: 14,
@@ -313,10 +324,6 @@ const OrdersList = () => {
             </Text>
             <Text
               style={{
-                // width: horizontalScale(63),
-                // height: verticalScale(19),
-                // paddingVertical: 10,
-                // textAlign: "center",
                 fontSize: moderateScale(16),
                 color: colors.pink,
                 lineHeight: 19,
