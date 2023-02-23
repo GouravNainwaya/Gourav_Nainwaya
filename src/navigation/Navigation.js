@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import OrderDetails from "../containers/OrderDetails";
 import ScheduleAPickup from './../containers/ScheduleAPickup';
 import OrdersList from './../containers/OrdersList';
+
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
@@ -19,6 +20,6 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navigation
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({})
